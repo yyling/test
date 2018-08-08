@@ -36,7 +36,7 @@ try{
     Db::rollback();
 }   
 
-2018年8月7日a11
+2018年8月7日a11qa
     1、根据时间统计曲线
           》统计一周内的开锁记录
     SELECT date_format(a.time,'%Y-%m-%d') as dimension,count(a.id) as cnt FROM `czw_openlock` `a` INNER JOIN `czw_lock` `l` ON `a`.`mac`=`l`.`mac` WHERE  `l`.`id` = '7'  AND `a`.`time` >= '2018-08-01 00:00:00'  AND `a`.`time` <= '2018-08-07 23:59:59' GROUP BY date_format(a.time,'%Y-%m-%d')
