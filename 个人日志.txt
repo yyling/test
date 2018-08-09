@@ -36,7 +36,25 @@ try{
     Db::rollback();
 }   
 
-2018年8月7日a11qa
+2018年8月7日
     1、根据时间统计曲线
           》统计一周内的开锁记录
     SELECT date_format(a.time,'%Y-%m-%d') as dimension,count(a.id) as cnt FROM `czw_openlock` `a` INNER JOIN `czw_lock` `l` ON `a`.`mac`=`l`.`mac` WHERE  `l`.`id` = '7'  AND `a`.`time` >= '2018-08-01 00:00:00'  AND `a`.`time` <= '2018-08-07 23:59:59' GROUP BY date_format(a.time,'%Y-%m-%d')
+
+2018年8月8日
+    1、使用git克隆github项目，开发后再提交推送到远程仓库
+    2、开发项目时考虑系统菜单树，哪些模块》模块下有哪些菜单》菜单下有哪些子菜单，形成菜单表，字段：
+id
+pid
+module             |
+title
+url_value
+value
+icon
+online_hide
+sort
+status
+ismenu
+      
+2018年8月9日
+    1、为人员分配房间时：1）考虑传参2）考虑房间容量3）考虑新增的和剔除的，区别操作
