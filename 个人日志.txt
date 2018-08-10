@@ -58,3 +58,18 @@ ismenu
       
 2018年8月9日
     1、为人员分配房间时：1）考虑传参2）考虑房间容量3）考虑新增的和剔除的，区别操作
+
+
+HAVING和WHERE的区别:
+
+where在数据分组前进行过滤，having在数据分组后进行过滤；where排除的行不包括在分组中（这可能会改变计算值，从而影响having子句中基于这些值过滤掉的分组）
+
+having和where可以同时使用，比如：
+
+SELECT name,COUNT() as id FROM person WHERE age >=20 GROUP BY name HAVING COUNT() >= 10;
+group by子句必须出现在where子句之后，order by子句之前；
+
+复习PHP中变量的数据类型： 
+         标量：字符串型、整型、浮点型、布尔型
+         复合：数组、对象
+         特殊：资源、NULL
